@@ -39,7 +39,7 @@
             margin-bottom: 20px;
         }
 
-        .neon-text:hover:before {
+        .neon-text::before {
             content: 'FITZE';
             position: absolute;
             top: 0;
@@ -52,7 +52,7 @@
             z-index: -1;
         }
 
-        .neon-text:hover:after {
+        .neon-text::after {
             content: 'BE FIT MAKE OTHERS MOTIVATE';
             position: absolute;
             top: 0;
@@ -100,17 +100,26 @@
             box-shadow: 0 0 15px rgba(255, 0, 255, 0.4), 0 0 45px rgba(0, 255, 255, 0.6);
         }
 
-        /* Container and Iframe Styling */
-        .container {
-            position: relative;
-            z-index: 1;
+        /* Flexbox Container */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             text-align: center;
             padding: 20px;
+        }
+
+        /* Container and Iframe Styling */
+        .container {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             max-width: 800px;
-            margin: 20px;
+            width: 100%;
+            margin-bottom: 20px;
         }
 
         .iframe-container {
@@ -163,35 +172,22 @@
             }
         }
 
-        /* Particle Background */
-        .particle-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
     </style>
 </head>
-<body>
-    <!-- Particle Background -->
-    <div class="particle-background">
-        <canvas id="particles-js"></canvas>
-    </div>
-
-    <div class="container">
-        <h1 class="neon-text">Welcome to Fitze</h1>
-        <p>Enhancing customer support with AI-powered assistance</p>
-        <p>Did you know that the tongue is the strongest muscle in the body?</p>
-    </div>
-
-    <!-- Iframe Container -->
-    <div class="iframe-container">
-        <iframe
-            src="https://voiceglow.org/app/na/render/j332eczysg59wabj/iframe"
-            frameborder="0">
-        </iframe>
+<body>    
+    <div class="flex-container">
+        <div class="container">
+            <h1 class="neon-text">Welcome to Fitze</h1>
+            <p>Enhancing customer support with AI-powered assistance</p>
+            <p>Did you know that the tongue is the strongest muscle in the body?</p>
+        </div>
+        <!-- Iframe Container -->
+        <div class="iframe-container">
+            <iframe
+                src="https://voiceglow.org/app/na/render/j332eczysg59wabj/iframe"
+                frameborder="0">
+            </iframe>
+        </div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -199,87 +195,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Particle.js Script -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        // Initialize Particles.js
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "orange"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                }
-            },
-            "retina_detect": true
-        });
-    </script>
 </body>
 </html>
