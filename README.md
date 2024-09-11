@@ -6,13 +6,19 @@ You can see the live demo of the Fitze AI chatbot by clicking the button below. 
 
 ## Live Demo
 
+Visit the following link to view the chatbot in action:
+
+[Fitze AI Live Demo](https://tejas-sawant-iffort.github.io/Fitze-AI/)
+
+
 To view the chatbot in action, please visit the link below:
 
 <iframe
-    src="https://voiceglow.org/app/na/render/j332eczysg59wabj/iframe"
+    src="https://tejas-sawant-iffort.github.io/Fitze-AI/"
     style="width: 100%; height: 500px; border: 5px solid #00bfff; border-radius: 10px;"
     frameborder="0">
 </iframe> 
+
 # Fitze AI
 
 Fitze AI is a sophisticated AI chatbot designed to enhance user interactions on your website. Built with advanced AI technologies, Fitze AI provides intelligent responses and a seamless user experience.
