@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fitze </title>
+    <title>Fitze AI</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -13,12 +13,17 @@
             padding: 0;
             font-family: Arial, sans-serif;
             overflow: hidden; /* Hide scrollbars */
+            background-color: #f8f9fa; /* Light background color */
+            color: #343a40; /* Dark text color for better readability */
         }
         .container {
             position: relative;
             z-index: 1;
             text-align: center;
             padding: 50px;
+            background-color: #ffffff; /* White background for content area */
+            border-radius: 10px; /* Rounded corners for a modern look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
         .particle-background {
             position: absolute;
@@ -26,7 +31,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
             z-index: 0;
         }
         .particle-background canvas {
@@ -42,6 +46,16 @@
             right: 20px;
             z-index: 1000; /* Ensure it is above other content */
         }
+        .header {
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .header p {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -51,14 +65,15 @@
     </div>
     
     <div class="container">
-        <h1>Welcome to Fitze</h1>
-        <p>Enhancing customer support with AI-powered assistance</p>
-        <p>Did you know that the tongue is the strongest muscle in the body?</p>
+        <div class="header">
+            <h1>Welcome to Fitze</h1>
+            <p>Enhancing customer support with AI-powered assistance</p>
+            <p>Did you know that the tongue is the strongest muscle in the body?</p>
+        </div>
     </div>
 
     <div id="VG_OVERLAY_CONTAINER">
-        <!-- Here is where Voiceglow renders the widget. -->
-        <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
+        <!-- Fitze AI widget will be rendered here -->
     </div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -160,9 +175,9 @@
                 ],
                 // Optional user data -- start
                 user: {
-                    name: 'John Doe', // User's name
-                    email: 'johndoe@gmail.com', // User's email
-                    phone: '+1234567890', // User's phone number
+                    name: 'Tejas', // User's name
+                    email: 'tejas.sawant@iffort.com', // User's email
+                    phone: '7447679060', // User's phone number
                 }
                 // Optional user data -- end
                 // **
