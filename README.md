@@ -4,18 +4,6 @@ You can see the live demo of the Fitze AI chatbot by clicking the button below. 
 
 [![See Demo](https://img.shields.io/badge/See_Demo-Click_here-blue)](https://tejas-sawant-iffort.github.io/Fitze-AI/)
 
-## Live Demo
-
-
-
-
-To view the chatbot in action, please visit the link below:
-
- <iframe
-    src="https://tejas-sawant-iffort.github.io/Fitze-AI/"
-    style="width: 100%; height: 500px; border: 5px solid #00bfff; border-radius: 10px;"
-    frameborder="0">
- </iframe> 
  
 # Fitze AI
 
