@@ -24,6 +24,8 @@
             background-color: #ffffff; /* White background for content area */
             border-radius: 10px; /* Rounded corners for a modern look */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            max-width: 800px;
+            margin: 0 auto;
         }
         .particle-background {
             position: absolute;
@@ -38,23 +40,20 @@
             width: 100%;
             height: 100%;
         }
-        #VG_OVERLAY_CONTAINER {
-            width: 300px; /* Adjust the width to your preference */
-            height: 400px; /* Adjust the height to your preference */
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000; /* Ensure it is above other content */
+        .iframe-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
-        .header {
-            margin-bottom: 30px;
-        }
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        .header p {
-            font-size: 1.2rem;
+        .iframe-container iframe {
+            width: 100%;
+            height: 80vh;
+            border: 5px solid #00bfff; /* Neon blue border */
+            border-radius: 10px; /* Rounded corners for the iframe */
         }
     </style>
 </head>
@@ -65,15 +64,17 @@
     </div>
     
     <div class="container">
-        <div class="header">
-            <h1>Welcome to Fitze</h1>
-            <p>Enhancing customer support with AI-powered assistance</p>
-            <p>Did you know that the tongue is the strongest muscle in the body?</p>
-        </div>
+        <h1>Welcome to Fitze</h1>
+        <p>Enhancing customer support with AI-powered assistance</p>
+        <p>Did you know that the tongue is the strongest muscle in the body?</p>
     </div>
 
-    <div id="VG_OVERLAY_CONTAINER">
-        <!-- Fitze AI widget will be rendered here -->
+    <!-- Iframe Container -->
+    <div class="iframe-container">
+        <iframe
+            src="https://voiceglow.org/app/na/render/j332eczysg59wabj/iframe"
+            frameborder="0">
+        </iframe>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -162,33 +163,7 @@
             },
             "retina_detect": true
         });
-        
-        (function() {
-            window.VG_CONFIG = {
-                ID: "j332eczysg59wabj", // YOUR AGENT ID
-                region: 'na', // YOUR ACCOUNT REGION 
-                render: 'bottom-right', // can be 'full-width' or 'bottom-left' or 'bottom-right'
-                stylesheets: [
-                    // Base Voiceglow CSS
-                    "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css",
-                    // Add your custom css stylesheets, Can also add relative URL ('/public/your-file.css)
-                ],
-                // Optional user data -- start
-                user: {
-                    name: 'Tejas', // User's name
-                    email: 'tejas.sawant@iffort.com', // User's email
-                    phone: '7447679060', // User's phone number
-                }
-                // Optional user data -- end
-                // **
-                // userID: 'USER_ID', // If you want to use your own user_id
-                // autostart: true, // Whether to autostart the chatbot with the proactive message
-            }
-            var VG_SCRIPT = document.createElement("script");
-            VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
-            VG_SCRIPT.defer = true; // Remove 'defer' if you want widget to load faster (Will affect website loading)
-            document.body.appendChild(VG_SCRIPT);
-        })()
     </script>
 </body>
 </html>
+
