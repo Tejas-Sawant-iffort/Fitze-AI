@@ -1,0 +1,2 @@
+# Fitze-AI
+bot
