@@ -24,13 +24,13 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            padding: 20px;
+            padding: 0;
         }
 
         /* Neon Effect */
         .neon-text {
-            font-size: 3rem;
-            color: #fff;
+            font-size: 2rem;
+            color: orange;
             text-transform: uppercase;
             text-align: center;
             letter-spacing: 0.1em;
@@ -40,7 +40,7 @@
         }
 
         .neon-text::before {
-            content: '';
+            content: 'FITZE';
             position: absolute;
             top: 0;
             left: 0;
@@ -53,7 +53,7 @@
         }
 
         .neon-text::after {
-            content: '';
+            content: 'BE FIT MAKE OTHERS MOTIVATE';
             position: absolute;
             top: 0;
             left: 0;
@@ -110,12 +110,12 @@
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px;
         }
 
         .iframe-container {
             width: 100%;
-            height: 80vh;
+            height: 60vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -136,11 +136,15 @@
         /* Responsive Styles */
         @media (max-width: 768px) {
             .neon-text {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
 
             .iframe-container {
-                height: 60vh;
+                height: 50vh;
+            }
+
+            .container {
+                padding: 15px;
             }
         }
 
@@ -150,9 +154,23 @@
             }
 
             .iframe-container {
-                height: 50vh;
+                height: 40vh;
                 padding: 10px;
             }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Particle Background */
+        .particle-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     </style>
 </head>
@@ -195,7 +213,7 @@
                     }
                 },
                 "color": {
-                    "value": "#ffffff"
+                    "value": "orange"
                 },
                 "shape": {
                     "type": "circle",
