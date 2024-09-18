@@ -56,6 +56,33 @@
             border: 2px solid black;
             border-radius: 10px; /* Rounded corners for the iframe */
         }
+
+        /* Button Style */
+        .button {
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .green-button {
+            background-color: #4caf50;
+        }
+
+        .back-button {
+            background-color: #ff5722;
+        }  
+
+        .button:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -70,6 +97,9 @@
                frameborder="0">
             </iframe>
         </div>
+
+        <!-- Back Button -->
+        <a href="index.html" class="button back-button">Back</a>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
