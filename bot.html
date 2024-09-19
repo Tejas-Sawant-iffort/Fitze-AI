@@ -37,6 +37,15 @@
             text-align: center;
         }
 
+        /* QR Code Styling */
+        .qr-code {
+            margin-bottom: 20px;
+            max-width: 200px;
+            width: 100%;
+            border: 4px solid neon green; /* Neon green border */
+            border-radius: 25%; /* Rounded corners */
+        }
+
         /* Button Style */
         .button {
             padding: 10px 25px;
@@ -48,26 +57,23 @@
             transition: all 0.3s ease-in-out;
             margin-top: 20px;
             display: inline-block;
-            text-decoration: none;
             text-align: center;
-        }
-
-        .green-button {
-            background-color: #4caf50;
+            background-color: #4caf50; /* Default green color */
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8); /* Glow effect */
         }
 
         .button:hover {
+            box-shadow: 0 0 20px rgba(76, 175, 80, 1); /* Stronger glow on hover */
             opacity: 0.9;
         }
 
-        /* QR Code Styling */
-        .qr-code {
-            margin-bottom: 20px;
-            max-width: 200px;
-            width: 100%;
-        }
-          .back-button {
+        .back-button {
             background-color: #ff5722;
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.8); /* Orange glow */
+        }
+
+        .back-button:hover {
+            box-shadow: 0 0 20px rgba(255, 87, 34, 1); /* Stronger orange glow on hover */
         }
     </style>
 </head>
@@ -75,11 +81,11 @@
     <div class="container">
         <!-- QR Code Image -->
         <img src="qr.png" alt="QR Code" class="qr-code">
-         <h2>Scan the QR and Chat</h2>
+        <h2>Scan the QR and Chat</h2>
 
-        <!-- Button -->
-        <a href="https://wa.me/15556205683?text=Hey" target="_blank" class="button green-button">Click Me 😊 For WP Fitze</a>
-        <a href="index.html" class="button back-button">Back</a>
+        <!-- Buttons instead of links -->
+        <button onclick="window.location.href='https://wa.me/15556205683?text=Hey'" class="button green-button">Click Me 😊 For WP Fitze</button>
+        <button onclick="window.location.href='index.html'" class="button back-button">Back</button>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -88,4 +94,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
