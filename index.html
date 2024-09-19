@@ -49,25 +49,29 @@
             cursor: pointer;
             transition: all 0.3s ease-in-out;
             margin: 10px;
-            text-decoration: none;
             display: inline-block;
             text-align: center;
+            position: relative;
         }
 
         .red-button {
             background-color: #ff4d4d;
+            box-shadow: 0 0 10px rgba(255, 77, 77, 0.8); /* Initial glow */
         }
 
         .yellow-button {
             background-color: #ffeb3b;
             color: #000;
+            box-shadow: 0 0 10px rgba(255, 235, 59, 0.8); /* Initial glow */
         }
 
         .green-button {
             background-color: #4caf50;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.8); /* Initial glow */
         }
 
         .button:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Stronger glow on hover */
             opacity: 0.9;
         }
 
@@ -97,6 +101,28 @@
         .logo {
             margin-bottom: 20px;
             max-width: 200px; /* Adjust based on your needs */
+        }
+
+        /* Tooltip Styling */
+        .button::after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .button:hover::after {
+            opacity: 1;
         }
 
         /* Responsive Styles */
@@ -134,9 +160,9 @@
 
         <!-- Buttons -->
         <div>
-            <a href="chat.html" class="button red-button">AI Chat</a>
-            <a href="voice.html" class="button yellow-button">AI Voice</a>
-            <a href="bot.html" class="button green-button">AI WhatsApp</a>
+            <button class="button red-button" onclick="window.location.href='chat.html'" data-title="AI Chat">AI Chat</button>
+            <button class="button yellow-button" onclick="window.location.href='voice.html'" data-title="AI Voice">AI Voice</button>
+            <button class="button green-button" onclick="window.location.href='bot.html'" data-title="AI WhatsApp">AI WhatsApp</button>
         </div>
     </div>
 
