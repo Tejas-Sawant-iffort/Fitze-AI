@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitze AI</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        /* Background */
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928DAB);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Flexbox Container */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Logo Styling */
+        .logo {
+            margin-bottom: 20px;
+            max-width: 200px; /* Adjust based on your needs */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <!-- Fitze Logo -->
+        <img src="https://www.fitze.ae/wp-content/themes/Fitze/images/logo.svg" alt="Fitze Logo" class="logo">
+    </div>
+
+    <!-- Voiceglow Widget -->
+    <div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
+        <!-- Here is where Voiceglow renders the widget. -->
+        <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
+    </div>
+
+    <!-- Voiceglow Script -->
+    <script defer>
+        (function() {
+            window.VG_CONFIG = {
+                ID: "dh2n9r77dj8f7nt6", // YOUR AGENT ID
+                region: 'na', // YOUR ACCOUNT REGION 
+                render: 'bottom-right', // can be 'full-width' or 'bottom-left' or 'bottom-right'
+                stylesheets: [
+                    // Base Voiceglow CSS
+                    "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css",
+                ],
+                // Optional user data
+                user: {
+                    name: 'John Doe', // User's name
+                    email: 'johndoe@gmail.com', // User's email
+                    phone: '+1234567890', // User's phone number
+                }
+            }
+            var VG_SCRIPT = document.createElement("script");
+            VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+            VG_SCRIPT.defer = true;
+            document.body.appendChild(VG_SCRIPT);
+        })()
+    </script>
+</body>
+</html>
