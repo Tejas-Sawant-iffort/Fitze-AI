@@ -23,153 +23,126 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0;
-            overflow: hidden;
         }
 
-        /* Neon Effect */
-        .neon-text {
-            font-size: 2rem;
-            color: #F7B83B;
-            text-transform: uppercase;
+        /* Flexbox for Two Columns */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Left and Right Divs */
+        .left, .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            max-width: 50%;
+            min-width: 300px;
             text-align: center;
-            letter-spacing: 0.1em;
-            position: relative;
-            padding: 5px 10px;
+        }
+
+        /* Left Div Styling */
+        .left .logo {
+            max-width: 150px;
             margin-bottom: 20px;
         }
 
-        /* Button Style */
-        .button {
+        .left .message {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .left .powered-by {
+            color: #f7b83b;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .left .qr-container img {
+            width: 80px;
+            margin: 5px;
+        }
+
+        /* Right Div Styling */
+        .right .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .right .button {
             padding: 10px 25px;
             border-radius: 50px;
             border: none;
             color: #fff;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
             margin: 10px;
-            display: inline-block;
-            text-align: center;
-            position: relative;
+            width: 200px;
         }
 
         .red-button {
             background-color: #ff4d4d;
-            box-shadow: 0 0 10px rgba(255, 77, 77, 0.8); /* Initial glow */
         }
 
         .yellow-button {
             background-color: #ffeb3b;
             color: #000;
-            box-shadow: 0 0 10px rgba(255, 235, 59, 0.8); /* Initial glow */
         }
 
         .green-button {
             background-color: #4caf50;
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.8); /* Initial glow */
         }
 
-        .button:hover {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Stronger glow on hover */
-            opacity: 0.9;
-        }
-
-        /* Flexbox Container */
-        .flex-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
-
-        /* Container Styling */
-        .container {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 1000px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        /* Logo Styling */
-        .logo {
-            margin-bottom: 20px;
-            max-width: 200px; /* Adjust based on your needs */
-        }
-
-        /* Tooltip Styling */
-        .button::after {
-            content: attr(data-title);
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.75);
-            color: #fff;
-            padding: 5px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            pointer-events: none;
-        }
-
-        .button:hover::after {
-            opacity: 1;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 15px;
-            }
-        }
-
+        /* Responsive Layout */
         @media (max-width: 768px) {
-            .neon-text {
-                font-size: 1.75rem;
-            }
-
-            .container {
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .neon-text {
-                font-size: 1.5rem;
-            }
-
-            .container {
-                padding: 10px;
+            .left, .right {
+                max-width: 100%;
             }
         }
     </style>
 </head>
-<body>    
-    <div class="flex-container">
-        <!-- Fitze Logo -->
-        <img src="https://www.fitze.ae/wp-content/themes/Fitze/images/logo.svg" alt="Fitze Logo" class="logo">
+<body>
 
-        <!-- Buttons -->
-        <div>
-            <button class="button red-button" onclick="window.location.href='choice.html'" data-title="AI Chat">AI Chat</button>
-            <button class="button yellow-button" onclick="window.location.href='voice.html'" data-title="AI Voice">AI Voice</button>
-            <button class="button green-button" onclick="window.location.href='bot.html'" data-title="AI WhatsApp">AI WhatsApp</button>
+<div class="container">
+    <!-- Left Div -->
+    <div class="left">
+        <!-- Logo -->
+        <img src="https://www.fitze.ae/wp-content/themes/Fitze/images/logo.svg" alt="Fitze Logo" class="logo">
+        <!-- Message -->
+        <div class="message">Welcome to Fitze AI. Scan the QR codes to connect with us!</div>
+        <!-- Powered by Text -->
+        <div class="powered-by">Powered by Iffort</div>
+        <!-- QR Images -->
+        <div class="qr-container">
+            <img src="https://via.placeholder.com/80" alt="QR Code 1">
+            <img src="https://via.placeholder.com/80" alt="QR Code 2">
+            <img src="https://via.placeholder.com/80" alt="QR Code 3">
         </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Right Div -->
+    <div class="right">
+        <!-- Logo -->
+        <img src="https://www.fitze.ae/wp-content/themes/Fitze/images/logo.svg" alt="Fitze Logo" class="logo">
+        <!-- Buttons -->
+        <button class="button red-button" onclick="window.location.href='choice.html'">AI Chat</button>
+        <button class="button yellow-button" onclick="window.location.href='voice.html'">AI Voice</button>
+        <button class="button green-button" onclick="window.location.href='bot.html'">AI WhatsApp</button>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
