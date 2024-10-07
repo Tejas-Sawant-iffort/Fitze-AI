@@ -10,6 +10,24 @@
 
     <!-- Custom CSS -->
     <style>
+
+        /* Line Separator between two divs */
+.separator {
+    border-left: 2px solid rgba(0, 255, 255, 0.6); /* Neon-like border */
+    height: 100%; /* Full height of the container */
+    position: absolute;
+    left: 50%; /* Position the line in the center */
+    top: 0;
+    z-index: 1; /* Keeps the line above other elements */
+}
+
+/* Add padding to ensure text doesn’t overlap the separator */
+.left, .right {
+    position: relative; /* Required to keep the separator positioned correctly */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
  .text {
     font-family: 'Orbitron', sans-serif; /* Futuristic font */
     font-size: 20px; /* Adjust size as needed */
@@ -187,7 +205,7 @@
             <img src="https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fwa.me%2F15556205683%3Ftext%3DHey%2520Fitze!%2520Can%2520you%2520explain%2520your%2520motive%3F&qzone=1&margin=0&size=400x400&ecc=L" alt="QR Code 3" class="neon-border">
         </div>
     </div>
-    
+    <div class="separator"></div>
     <div class=" right flex-container">
         <!-- Fitze Logo -->
         <img src="https://www.fitze.ae/wp-content/themes/Fitze/images/logo.svg" alt="Fitze Logo" class="logo">
