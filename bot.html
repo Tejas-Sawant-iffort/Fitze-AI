@@ -10,243 +10,6 @@
 
     <!-- Custom CSS -->
     <style>
-      /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Background */
-        body {
-            background: linear-gradient(135deg, #1f1c2c, #928DAB);
-            font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Flexbox for Two Columns */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            max-width: 1200px;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        /* Left and Right Divs */
-        .left, .right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            max-width: 50%;
-            min-width: 300px;
-            text-align: center;
-        }
-
-        /* Left Div Styling */
-        .left .logo {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
-
-        .left .message {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .left .powered-by {
-            color: #f7b83b;
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .left .qr-container img {
-            width: 80px;
-            margin: 5px;
-        }
-
-        /* Right Div Styling */
-        .right .logo {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
-
-        .right .button {
-            padding: 10px 25px;
-            border-radius: 50px;
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-            margin: 10px;
-            width: 200px;
-        }
-
-        .red-button {
-            background-color: #ff4d4d;
-        }
-
-        .yellow-button {
-            background-color: #ffeb3b;
-            color: #000;
-        }
-
-        .green-button {
-            background-color: #4caf50;
-        }
-
-        /* Responsive Layout */
-        @media (max-width: 768px) {
-            .left, .right {
-                max-width: 100%;
-            }
-        }
-        .neon-text {
-            font-size: 2rem;
-            color: #F7B83B;
-            text-transform: uppercase;
-            text-align: center;
-            letter-spacing: 0.1em;
-            position: relative;
-            padding: 5px 10px;
-            margin-bottom: 20px;
-        }
-
-      
-
-        
-
-        /* Glassmorphism Effect */
-        .glass-container {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            text-align: center;
-            color: white;
-            margin: auto;
-        }
- .button {
-            padding: 10px 25px;
-            border-radius: 50px;
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            margin-top: 20px;
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-        }
-        /* Button Style with Neon Effect */
-        .neon-button {
-            padding: 10px 25px;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-            position: relative;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .neon-button:hover {
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.8);
-        }
-
-        .neon-button:active {
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.4), 0 0 45px rgba(0, 255, 255, 0.6);
-        }
-         .button:hover {
-            opacity: 0.9;
-        }
-        /* Neon Effect */
-         
-        /* Flexbox Container */
-        .flex-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
-
-        
-
-        .iframe-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            box-sizing: border-box;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .iframe-container iframe {
-            width: 100%;
-            height: 80vh;
-            border: 2px solid black;
-            border-radius: 10px; /* Rounded corners for the iframe */
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .iframe-container iframe {
-                height: 105vh;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .neon-text {
-                font-size: 1.75rem;
-            }
-
-            .iframe-container iframe {
-                height: 90vh;
-            }
-
-            .container {
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .neon-text {
-                font-size: 1.5rem;
-            }
-
-            .iframe-container iframe {
-                height: 75vh;
-            }
-
-            .container {
-                padding: 10px;
-            }
-        }
-        .back-button {
-            background-color: #ff5722;
-        } 
-
  .text {
     font-family: 'Orbitron', sans-serif; /* Futuristic font */
     font-size: 20px; /* Adjust size as needed */
@@ -260,12 +23,29 @@
 .neon-border {
     border: 2px solid rgba(0, 255, 255, 0.8); /* Neon border color */
     border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6); /* Neon glow effect */
+    box-shadow: 0 0 1px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6); /* Neon glow effect */
     padding: 5px; /* Optional: space between border and image */
     display: inline-block; /* Ensure the border wraps the image properly */
 }
 
- 
+ .neon-button {
+    background-color: transparent; /* Make the background transparent */
+    color: #00FFFF; /* Neon text color */
+    border: 2px solid rgba(0, 255, 255, 0.8); /* Neon border color */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 0 1px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6); /* Neon glow effect */
+}
+
+/* Hover effect */
+.neon-button:hover {
+    background-color: rgba(0, 255, 255, 0.1); /* Light background on hover */
+    box-shadow: 0 0 2px rgba(0, 255, 255, 1), 0 0 15px rgba(0, 255, 255, 0.8); /* Enhanced glow effect */
+}
+
         
     .robotic-title {
     font-family: 'Roboto', sans-serif; /* Modern font */
@@ -407,13 +187,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCdWjZg6mTxJmyIOFr0UhpFvI9nwKK7pKTkw&s" alt="QR Code 3" class="neon-border">
         </div>
     </div>
-
-     
-       
-     
- 
- 
-       
+    
    
 
     <!-- Right Div -->
@@ -422,11 +196,11 @@
         
         <!-- QR Code Image -->
         <img src="FITZE AI.png" alt="QR Code" class="neon-border logo qr-container">
-        <h2>Scan the QR and Chat</h2>
+        <h2 class="robotic-title">Scan the QR and Chat</h2>
 
         <!-- Buttons instead of links -->
        
-        <button onclick="window.location.href='index.html'" class="button back-button">Back</button>
+        <button onclick="window.location.href='index.html'" class="neon-button">Back</button>
  
     </div>
 </div>
