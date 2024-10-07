@@ -10,6 +10,22 @@
 
     <!-- Custom CSS -->
     <style>
+        .half-separator {
+    border-left: 2px solid rgba(0, 255, 255, 0.6); /* Neon-like border */
+    height: 50%; /* Half the height of the container */
+    position: absolute;
+    left: 50%; /* Position the line in the center */
+    top: 25%; /* Start the line from the middle */
+    transform: translateX(-50%); /* Center the line */
+    z-index: 1; /* Keeps the line above other elements */
+}
+
+/* Mobile View Adjustment */
+@media (max-width: 665px) {
+    .half-separator {
+        display:none;
+    }
+}
  .text {
     font-family: 'Orbitron', sans-serif; /* Futuristic font */
     font-size: 20px; /* Adjust size as needed */
@@ -188,7 +204,7 @@
         </div>
     </div>
     
-   
+   <div class="half-separator"></div>
 
     <!-- Right Div -->
     <div class="right flex-container">
