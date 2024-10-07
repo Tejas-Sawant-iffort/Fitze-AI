@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <style>
+    .robotic-title {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    font-size: 48px; /* Adjust size as needed */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 5px; /* Space between letters for a robotic feel */
+    background: linear-gradient(90deg, #00ffcc, #0077ff); /* Gradient effect */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+    animation: pulse 2s infinite; /* Optional pulse animation */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+        
         /* General Reset */
         * {
             margin: 0;
@@ -117,7 +137,7 @@
         <!-- Logo -->
         <img src="data:image/png;base64,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" alt="JEtX Logo" class="logo">
         <!-- Message -->
-        <div class="message"> JETX || Fitze || Iffort , Scan the QR codes to connect with us!</div>
+        <div class="message robotic-title"> JETX || Fitze || Iffort , Scan the QR codes to connect with us!</div>
         <!-- Powered by Text -->
         <div class="powered-by">Powered by  Iffort  </div>
         <!-- QR Images -->
