@@ -7,88 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-         <style>
-
-        /* Line Separator between two divs */
-.separator {
-    border-left: 2px solid rgba(0, 255, 255, 0.6); /* Neon-like border */
-    height: 100%; /* Full height of the container */
-    position: absolute;
-    left: 50%; /* Position the line in the center */
-    top: 0;
-    z-index: 1; /* Keeps the line above other elements */
-}
-
-
-}
-/* Half-Line Separator between two divs */
-/* Half-Line Separator between two divs */
-.half-separator {
-    border-left: 2px solid rgba(0, 255, 255, 0.6); /* Neon-like border */
-    height: 50%; /* Half the height of the container */
-    position: absolute;
-    left: 50%; /* Position the line in the center */
-    top: 25%; /* Start the line from the middle */
-    transform: translateX(-50%); /* Center the line */
-    z-index: 1; /* Keeps the line above other elements */
-}
-
-/* Mobile View Adjustment */
-@media (max-width: 665px) {
-    .half-separator {
-        display:none;
-    }
-}
-
-
- 
-.neon-border {
-    border: 2px solid rgba(0, 255, 255, 0.8); /* Neon border color */
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 0 1px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6); /* Neon glow effect */
-    padding: 5px; /* Optional: space between border and image */
-    display: inline-block; /* Ensure the border wraps the image properly */
-}
-
- .neon-button {
-    background-color: transparent; /* Make the background transparent */
-    color: #00FFFF; /* Neon text color */
-    border: 2px solid rgba(0, 255, 255, 0.8); /* Neon border color */
-    border-radius: 5px; /* Optional: rounded corners */
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Change cursor on hover */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    box-shadow: 0 0 1px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6); /* Neon glow effect */
-}
-
-/* Hover effect */
-.neon-button:hover {
-    background-color: rgba(0, 255, 255, 0.1); /* Light background on hover */
-    box-shadow: 0 0 2px rgba(0, 255, 255, 1), 0 0 15px rgba(0, 255, 255, 0.8); /* Enhanced glow effect */
-}
-
-        
-    .robotic-title {
-    font-family: 'Roboto', sans-serif; /* Modern font */
-    font-size: 48px; /* Adjust size as needed */
-    text-transform: uppercase; /* Makes text uppercase */
-    letter-spacing: 5px; /* Space between letters for a robotic feel */
-   
-    -webkit-background-clip: text;
-    /* Makes text color transparent to show gradient */
-    animation: pulse 2s; /* Optional pulse animation */
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-        
         /* General Reset */
         * {
             margin: 0;
@@ -104,35 +22,59 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-       
-    
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1c1c1e, #2d2d30);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            color: white;
         }
 
+        /* Glassmorphism Container */
         .landing-container {
             text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.15); /* Slight transparency */
+            backdrop-filter: blur(15px); /* Blur effect */
             padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
             max-width: 400px;
             width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle inner glow */
         }
 
-        .logo img {
-            max-width: 150px;
-            margin-bottom: 20px;
+        /* Neon Border for Images */
+        .neon-border {
+            border: 2px solid rgba(0, 255, 255, 0.8); /* Neon border color */
+            border-radius: 10px;
+            box-shadow: 0 0 1px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6); /* Neon glow effect */
+            padding: 5px;
+            display: inline-block;
+        }
+
+        /* Neon Button Styling */
+        .btn-custom {
+            background-color: transparent;
+            color: #00FFFF;
+            border: 2px solid rgba(0, 255, 255, 0.8);
+            border-radius: 5px;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 1px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        .btn-custom:hover {
+            background-color: rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 2px rgba(0, 255, 255, 1), 0 0 15px rgba(0, 255, 255, 0.8);
+            transform: scale(1.05);
+        }
+
+        .btn-custom a {
+            color: #00FFFF;
+            text-decoration: none;
+        }
+
+        .btn-custom a:hover {
+            text-decoration: none;
         }
 
         .text {
@@ -148,32 +90,15 @@
             font-style: italic;
         }
 
+        .logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
         .qr-code img {
             max-width: 150px;
             margin-bottom: 20px;
-            border: 2px solid #fff;
-            padding: 5px;
             border-radius: 10px;
-        }
-
-        .btn-custom {
-            background-color: #00d4ff;
-            color: #000;
-            font-size: 16px;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-transform: uppercase;
-            font-weight: 600;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .btn-custom:hover {
-            background-color: #00a1cc;
-            transform: scale(1.05);
-        }
-
-        .btn-custom:focus {
-            outline: none;
         }
 
         /* Responsive Design */
@@ -200,12 +125,11 @@
 <body>
 
     <div class="landing-container">
-         
         <!-- Organization Logo -->
         <div class="logo">
-            <img src="GGWhiteLogo24.png" alt=" Logo" class="logo">
+            <img src="GGWhiteLogo24.png" alt="Logo" class="logo">
         </div>
-<!--         <div class="message robotic-title"> Gitex || Fitze || Iffort , Scan the QR codes to connect with us!</div> -->
+
         <!-- A few lines of text introducing AI services -->
         <div class="text">
             Transform your business with cutting-edge AI solutions. Discover how our AI services can optimize your workflows, improve decision-making, and drive innovation.
@@ -218,13 +142,11 @@
 
         <!-- QR Code -->
         <div class="qr-code">
-           
-            <img src="https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fiffort-ai-agents.netlify.app%2Fchat.html&qzone=1&margin=0&size=400x400&ecc=L" alt="QR Code 1" class="neon-border">  
-            
+            <img src="https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fiffort-ai-agents.netlify.app%2Fchat.html&qzone=1&margin=0&size=400x400&ecc=L" alt="QR Code" class="neon-border">
         </div>
 
-        <!-- Button for Next/Explore -->
-        <button class="btn btn-custom" ><a href="Services.html"> Explore AI </a></button>
+        <!-- Button for Explore -->
+        <button class="btn btn-custom"><a href="Services.html">Explore AI</a></button>
     </div>
 
 </body>
