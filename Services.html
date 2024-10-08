@@ -1,0 +1,103 @@
+<!-- second-page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services and Solutions - Second Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .usecase {
+      margin-bottom: 20px;
+    }
+
+    .services-list {
+      margin-bottom: 20px;
+    }
+
+    .services-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services-list li {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .services-list li:hover {
+      background-color: #e0e0e0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .back-button:hover {
+      background-color: #d32f2f;
+    }
+
+    .view-service {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .view-service:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Use Case and Services</h1>
+
+  <div class="usecase">
+    <h2>Use Case</h2>
+    <p>This is a brief description of the use case you're working on. It explains the problem and how our solution can help solve it.</p>
+  </div>
+
+  <div class="services-list">
+    <h2>Services / Solutions We Provide</h2>
+    <ul>
+      <li onclick="alert('Service 1 Details')">Service 1</li>
+      <li onclick="alert('Service 2 Details')">Service 2</li>
+      <li onclick="alert('Service 3 Details')">Service 3</li>
+    </ul>
+  </div>
+
+  <div class="buttons">
+    <button class="back-button" onclick="history.back()">Back</button>
+    <button class="view-service" onclick="alert('View More Details on Service')">View More Details</button>
+  </div>
+
+</body>
+</html>
