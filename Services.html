@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services and Solutions - Second Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     /* General Page Styling */
     body {
@@ -50,6 +51,7 @@
       overflow: hidden;
       height: 300px; /* Fixed height for cards */
       width: 250px; /* Fixed width for cards */
+      cursor: pointer; /* Indicate clickable card */
     }
 
     .card:hover {
@@ -77,6 +79,28 @@
       height: 100%; /* Ensure content fills the card */
     }
 
+    .demo-text {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      color: white;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    .demo-text::after {
+      content: '→'; /* Arrow */
+      margin-left: 5px;
+    }
+
+    .card:hover .demo-text {
+      opacity: 1; /* Show on hover */
+    }
+
     /* Responsive Grid */
     .services-grid {
       display: flex;
@@ -85,37 +109,19 @@
     }
 
     /* Button Styling */
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .buttons button {
+    .view-service {
+      background-color: #007BFF;
+      color: white;
       padding: 10px 20px;
-      font-size: 16px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      color: white;
-    }
-
-    .back-button {
-      background-color: #f44336;
-    }
-
-    .back-button:hover {
-      background-color: #d32f2f;
-    }
-
-    .view-service {
-      background-color: #007BFF;
     }
 
     .view-service:hover {
       background-color: #0056b3;
     }
-
   </style>
 </head>
 <body>
@@ -131,77 +137,70 @@
 
     <h2>Services / Solutions We Provide</h2>
     <div class="services-grid">
-      <div class="card">
+      <div class="card" onclick="window.open('https://plantseatery.webflow.io/', '_blank')">
         <img src="https://via.placeholder.com/300" alt="Plants Eatery">
         <div class="card-content">
           <h3>Plants Eatery</h3>
-          <p>Voice Agent in Chinese and English for a plant-based eatery restaurant</p>
-          <a href="https://plantseatery.webflow.io/" target="_blank">Demo</a>
+          <p>Food Restaurant</p>
         </div>
+        <div class="demo-text">Demo</div>
       </div>
-      <div class="card">
+      <div class="card" onclick="window.open('https://aiinterviewer.webflow.io/', '_blank')">
         <img src="https://via.placeholder.com/300" alt="Harman Interviewer">
         <div class="card-content">
-          <h3>Harman Interviewer</h3>
-          <p>Voice AI interviewer in Hinglish for In-Store Promoter</p>
-          <a href="https://aiinterviewer.webflow.io/" target="_blank">Demo</a>
+          <h3>Harman</h3>
+          <p>An AI Voice Interviewer</p>
         </div>
+        <div class="demo-text">Demo</div>
       </div>
-      <div class="card">
+      <div class="card" onclick="window.open('http://samples.iffort.ai:62', '_blank')">
         <img src="https://via.placeholder.com/300" alt="Sunway MirAI">
         <div class="card-content">
           <h3>Sunway MirAI</h3>
-          <p>Action-performing Voice Agent for Sunway City in Malaysia</p>
-          <a href="http://samples.iffort.ai:62" target="_blank">Demo</a>
+          <p>Real Estate AI in Malaysia</p>
         </div>
+        <div class="demo-text">Demo</div>
       </div>
-      <div class="card">
+      <div class="card" onclick="window.open('http://samples.iffort.ai:64', '_blank')">
         <img src="https://via.placeholder.com/300" alt="USA MirAI">
         <div class="card-content">
           <h3>USA MirAI</h3>
-          <p>Voice Agent for real estate experts in the USA</p>
-          <a href="http://samples.iffort.ai:64" target="_blank">Demo</a>
+          <p>Real Estate Agent in USA</p>
         </div>
+        <div class="demo-text">Demo</div>
       </div>
-      <div class="card">
+      <div class="card" onclick="window.open('https://interviewerchatbot.onrender.com/', '_blank')">
         <img src="https://via.placeholder.com/300" alt="Harman Interviewer Chat">
         <div class="card-content">
-          <h3>Harman Interviewer (Chat)</h3>
-          <p>Chat AI interviewer in Hinglish for In-Store Promoter</p>
-          <a href="https://interviewerchatbot.onrender.com/" target="_blank">Demo</a>
+          <h3>Harman Interviewer</h3>
+          <p>An AI Chat Interviewer</p>
         </div>
+        <div class="demo-text">Demo</div>
       </div>
-      <div class="card">
+      <div class="card" onclick="window.open('http://samples.iffort.ai:66/', '_blank')">
         <img src="https://via.placeholder.com/300" alt="HR Iffort">
         <div class="card-content">
-          <h3>HR Iffort (Live)</h3>
-          <p>AI Chat bot for HR of Iffort</p>
-          <a href="http://samples.iffort.ai:66/" target="_blank">Demo</a>
+          <h3>HR Iffort</h3>
+          <p>HR AI</p>
         </div>
+        <div class="demo-text">Demo</div>
       </div>
-      <div class="card">
+      <div class="card" onclick="window.open('https://tejas-sawant-iffort.github.io/Fitze-AI/Fitze.html', '_blank')">
         <img src="https://via.placeholder.com/300" alt="FitZe VoiceGlow">
         <div class="card-content">
-          <h3>FitZe VoiceGlow (Demo)</h3>
-          <p>FitZe FAQ all-in-one AI (Voice, WhatsApp, Chatbot)</p>
-          <a href="https://tejas-sawant-iffort.github.io/Fitze-AI/Fitze.html" target="_blank">Demo</a>
+          <h3>FitZe</h3>
+          <p>Healthcare AI</p>
         </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300" alt="Agency">
-        <div class="card-content">
-          <h3>Agency</h3>
-          <p>Dashboard for digital agency solutions</p>
-          <a href="https://agents.iffort.ai" target="_blank">Demo</a>
-        </div>
+        <div class="demo-text">Demo</div>
       </div>
     </div>
 
     <div class="buttons">
-      <button class="back-button" onclick="history.back()">Back</button>
       <button class="view-service" onclick="window.location.href='https://www.iffort.ai'">Connect Iffort.ai</button>
     </div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
