@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Services Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1c1c1e, #2d2d30);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .landing-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-size: 18px;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .powered-by {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .qr-code img {
+            max-width: 150px;
+            margin-bottom: 20px;
+            border: 2px solid #fff;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .btn-custom {
+            background-color: #00d4ff;
+            color: #000;
+            font-size: 16px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #00a1cc;
+            transform: scale(1.05);
+        }
+
+        .btn-custom:focus {
+            outline: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 576px) {
+            .landing-container {
+                padding: 30px;
+            }
+
+            .logo img {
+                max-width: 100px;
+            }
+
+            .qr-code img {
+                max-width: 120px;
+            }
+
+            .btn-custom {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        <!-- Organization Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="AI Services Logo">
+        </div>
+
+        <!-- A few lines of text introducing AI services -->
+        <div class="text">
+            Transform your business with cutting-edge AI solutions. Discover how our AI services can optimize your workflows, improve decision-making, and drive innovation.
+        </div>
+
+        <!-- Powered by Iffort -->
+        <div class="powered-by">
+            Powered by <strong>Iffort</strong>
+        </div>
+
+        <!-- QR Code -->
+        <div class="qr-code">
+            <img src="qr-code.png" alt="Scan to Learn More">
+        </div>
+
+        <!-- Button for Next/Explore -->
+        <button class="btn btn-custom">Explore AI</button>
+    </div>
+
+</body>
+</html>
