@@ -25,7 +25,7 @@
       backdrop-filter: blur(10px);
       border-radius: 15px;
       padding: 30px;
-      max-width: 800px;
+      max-width: 1200px;
       width: 100%;
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
@@ -36,45 +36,47 @@
       margin-bottom: 20px;
     }
 
-    /* Table Styling */
-    .services-table {
+    /* Card Styling */
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      border: 2px solid pink;
+      box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+      margin: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
+      height: 250px; /* Fixed height for cards */
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
+      height: 100%;
+      opacity: 0.3; /* Background image opacity */
+      object-fit: cover;
+      z-index: 1;
     }
 
-    .services-table th, .services-table td {
-      padding: 12px 15px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
-    }
-
-    .services-table th {
-      background-color: rgba(0, 123, 255, 0.5);
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .services-table tr:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .services-table tr:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .services-table td a {
-      color: #ffffff;
-      text-decoration: none;
-      background-color: #007BFF;
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .services-table td a:hover {
-      background-color: #0056b3;
+    .card-content {
+      position: relative;
+      z-index: 2;
       color: white;
+    }
+
+    /* Responsive Grid */
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     /* Button Styling */
@@ -122,64 +124,77 @@
       <p style="color: white; text-align: center;">This is a brief description of the use case you're working on. It explains the problem and how our solution can help solve it.</p>
     </div>
 
-    <div class="services-table-wrapper">
-      <h2>Services / Solutions We Provide</h2>
-      <table class="services-table">
-        <thead>
-          <tr>
-            <th>Name of AI Service</th>
-            <th>Use Case</th>
-            <th>Demo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Plants Eatry</td>
-            <td>Voice Agent in Chinese and English for a plant-based eatery restaurant</td>
-            <td><a href="https://plantseatery.webflow.io/" target="_blank">Demo</a></td>
-          </tr>
-          <tr>
-            <td>Harman Interviewer</td>
-            <td>Voice AI interviewer in Hinglish for In-Store Promoter</td>
-            <td><a href="https://aiinterviewer.webflow.io/" target="_blank">Demo</a></td>
-          </tr>
-          <tr>
-            <td>Sunway MirAI</td>
-            <td>Action-performing Voice Agent, can book calendars, search for properties in the list, for Sunway City in Malaysia</td>
-            <td><a href="http://samples.iffort.ai:62" target="_blank">Demo</a></td>
-          </tr>
-          <tr>
-            <td>USA MirAI</td>
-            <td>Action-performing Voice Agent, can book calendars, search for properties in the list, for real estate experts in the USA</td>
-            <td><a href="http://samples.iffort.ai:64" target="_blank">Demo</a></td>
-          </tr>
-          <tr>
-            <td>Harman Interviewer</td>
-            <td>Chat AI interviewer in Hinglish for In-Store Promoter</td>
-            <td><a href="https://interviewerchatbot.onrender.com/" target="_blank">Demo</a></td>
-          </tr>
-          <tr>
-            <td>HR Iffort (Live)</td>
-            <td>AI Chat bot for HR of Iffort</td>
-            <td><a href="http://samples.iffort.ai:66/" target="_blank">Demo</a></td>
-          </tr>
-          <tr>
-            <td>FitZe VoiceGlow (Demo)</td>
-            <td>FitZe FAQ all-in-one AI (Voice, WhatsApp, Chatbot)</td>
-            <td><a href="https://tejas-sawant-iffort.github.io/Fitze-AI/Fitze.html" target="_blank">Demo</a></td>
-          </tr>
-          <tr>
-            <td>Agency</td>
-            <td>Dashboard for digital agency solutions</td>
-            <td><a href="https://agents.iffort.ai" target="_blank">Demo</a></td>
-          </tr>
-        </tbody>
-      </table>
+    <h2>Services / Solutions We Provide</h2>
+    <div class="services-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Plants Eatery">
+        <div class="card-content">
+          <h3>Plants Eatery</h3>
+          <p>Voice Agent in Chinese and English for a plant-based eatery restaurant</p>
+          <a href="https://plantseatery.webflow.io/" target="_blank">Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Harman Interviewer">
+        <div class="card-content">
+          <h3>Harman Interviewer</h3>
+          <p>Voice AI interviewer in Hinglish for In-Store Promoter</p>
+          <a href="https://aiinterviewer.webflow.io/" target="_blank">Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Sunway MirAI">
+        <div class="card-content">
+          <h3>Sunway MirAI</h3>
+          <p>Action-performing Voice Agent for Sunway City in Malaysia</p>
+          <a href="http://samples.iffort.ai:62" target="_blank">Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="USA MirAI">
+        <div class="card-content">
+          <h3>USA MirAI</h3>
+          <p>Voice Agent for real estate experts in the USA</p>
+          <a href="http://samples.iffort.ai:64" target="_blank">Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Harman Interviewer Chat">
+        <div class="card-content">
+          <h3>Harman Interviewer (Chat)</h3>
+          <p>Chat AI interviewer in Hinglish for In-Store Promoter</p>
+          <a href="https://interviewerchatbot.onrender.com/" target="_blank">Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="HR Iffort">
+        <div class="card-content">
+          <h3>HR Iffort (Live)</h3>
+          <p>AI Chat bot for HR of Iffort</p>
+          <a href="http://samples.iffort.ai:66/" target="_blank">Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="FitZe VoiceGlow">
+        <div class="card-content">
+          <h3>FitZe VoiceGlow (Demo)</h3>
+          <p>FitZe FAQ all-in-one AI (Voice, WhatsApp, Chatbot)</p>
+          <a href="https://tejas-sawant-iffort.github.io/Fitze-AI/Fitze.html" target="_blank">Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Agency">
+        <div class="card-content">
+          <h3>Agency</h3>
+          <p>Dashboard for digital agency solutions</p>
+          <a href="https://agents.iffort.ai" target="_blank">Demo</a>
+        </div>
+      </div>
     </div>
 
     <div class="buttons">
       <button class="back-button" onclick="history.back()">Back</button>
-      <button class="view-service" onclick="window.href="www.iffort.ai">Connect Iffort.ai </button>
+      <button class="view-service" onclick="window.location.href='https://www.iffort.ai'">Connect Iffort.ai</button>
     </div>
   </div>
 
