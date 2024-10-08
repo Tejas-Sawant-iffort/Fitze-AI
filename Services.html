@@ -5,20 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services and Solutions - Second Page</title>
   <style>
+    /* General Page Styling */
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f4f4f4;
+      font-family: 'Arial', sans-serif;
+      background: url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    h1 {
-      color: #333;
+    /* Container Styling with Glassmorphism */
+    .glass-container {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
-    .usecase {
+    h1, h2 {
+      color: white;
+      text-align: center;
       margin-bottom: 20px;
     }
 
+    /* Table Styling */
     .services-table {
       width: 100%;
       border-collapse: collapse;
@@ -26,40 +44,43 @@
     }
 
     .services-table th, .services-table td {
-      padding: 12px;
-      text-align: left;
-      border: 1px solid #ddd;
+      padding: 12px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
     }
 
     .services-table th {
-      background-color: #007BFF;
-      color: white;
+      background-color: rgba(0, 123, 255, 0.5);
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
-    .services-table td {
-      background-color: #fff;
+    .services-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
-    .services-table tr:hover td {
-      background-color: #e0e0e0;
+    .services-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
-    .demo-button {
-      padding: 8px 16px;
-      background-color: #007BFF;
-      color: white;
+    .services-table td a {
+      color: #007BFF;
       text-decoration: none;
+      background-color: #007BFF;
+      padding: 8px 16px;
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
 
-    .demo-button:hover {
+    .services-table td a:hover {
       background-color: #0056b3;
+      color: white;
     }
 
+    /* Button Styling */
     .buttons {
       display: flex;
-      gap: 10px;
+      justify-content: space-between;
     }
 
     .buttons button {
@@ -69,11 +90,11 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      color: white;
     }
 
     .back-button {
       background-color: #f44336;
-      color: white;
     }
 
     .back-button:hover {
@@ -82,81 +103,84 @@
 
     .view-service {
       background-color: #007BFF;
-      color: white;
     }
 
     .view-service:hover {
       background-color: #0056b3;
     }
+
   </style>
 </head>
 <body>
 
-  <h1>Use Case and Services</h1>
+  <!-- Glassmorphism Container -->
+  <div class="glass-container">
+    <h1>Use Case and Services</h1>
 
-  <div class="usecase">
-    <h2>Use Case</h2>
-    <p>This is a brief description of the use case you're working on. It explains the problem and how our solution can help solve it.</p>
-  </div>
+    <div class="usecase">
+      <h2>Use Case</h2>
+      <p style="color: white; text-align: center;">This is a brief description of the use case you're working on. It explains the problem and how our solution can help solve it.</p>
+    </div>
 
-  <div class="services-table-wrapper">
-    <h2>Services / Solutions We Provide</h2>
-    <table class="services-table">
-      <thead>
-        <tr>
-          <th>Name of AI Service</th>
-          <th>Use Case</th>
-          <th>Demo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Plants Eatry</td>
-          <td>Voice Agent in Chinese and English for a plant-based eatery restaurant</td>
-          <td><a href="https://plantseatery.webflow.io/" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-        <tr>
-          <td>Harman Interviewer</td>
-          <td>Voice AI interviewer in Hinglish for In-Store Promoter</td>
-          <td><a href="https://aiinterviewer.webflow.io/" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-        <tr>
-          <td>Sunway MirAI</td>
-          <td>Action-performing Voice Agent, can book calendars, search for properties in the list, for Sunway City in Malaysia</td>
-          <td><a href="http://samples.iffort.ai:62" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-        <tr>
-          <td>USA MirAI</td>
-          <td>Action-performing Voice Agent, can book calendars, search for properties in the list, for real estate experts in the USA</td>
-          <td><a href="http://samples.iffort.ai:64" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-        <tr>
-          <td>Harman Interviewer</td>
-          <td>Chat AI interviewer in Hinglish for In-Store Promoter</td>
-          <td><a href="https://interviewerchatbot.onrender.com/" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-        <tr>
-          <td>HR Iffort (Live)</td>
-          <td>AI Chat bot for HR of Iffort</td>
-          <td><a href="http://samples.iffort.ai:66/" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-        <tr>
-          <td>FitZe VoiceGlow (Demo)</td>
-          <td>FitZe FAQ all-in-one AI (Voice, WhatsApp, Chatbot)</td>
-          <td><a href="https://tejas-sawant-iffort.github.io/Fitze-AI/" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-        <tr>
-          <td>Agency</td>
-          <td>Dashboard for digital agency solutions</td>
-          <td><a href="https://agents.iffort.ai" class="demo-button" target="_blank">Demo</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="services-table-wrapper">
+      <h2>Services / Solutions We Provide</h2>
+      <table class="services-table">
+        <thead>
+          <tr>
+            <th>Name of AI Service</th>
+            <th>Use Case</th>
+            <th>Demo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Plants Eatry</td>
+            <td>Voice Agent in Chinese and English for a plant-based eatery restaurant</td>
+            <td><a href="https://plantseatery.webflow.io/" target="_blank">Demo</a></td>
+          </tr>
+          <tr>
+            <td>Harman Interviewer</td>
+            <td>Voice AI interviewer in Hinglish for In-Store Promoter</td>
+            <td><a href="https://aiinterviewer.webflow.io/" target="_blank">Demo</a></td>
+          </tr>
+          <tr>
+            <td>Sunway MirAI</td>
+            <td>Action-performing Voice Agent, can book calendars, search for properties in the list, for Sunway City in Malaysia</td>
+            <td><a href="http://samples.iffort.ai:62" target="_blank">Demo</a></td>
+          </tr>
+          <tr>
+            <td>USA MirAI</td>
+            <td>Action-performing Voice Agent, can book calendars, search for properties in the list, for real estate experts in the USA</td>
+            <td><a href="http://samples.iffort.ai:64" target="_blank">Demo</a></td>
+          </tr>
+          <tr>
+            <td>Harman Interviewer</td>
+            <td>Chat AI interviewer in Hinglish for In-Store Promoter</td>
+            <td><a href="https://interviewerchatbot.onrender.com/" target="_blank">Demo</a></td>
+          </tr>
+          <tr>
+            <td>HR Iffort (Live)</td>
+            <td>AI Chat bot for HR of Iffort</td>
+            <td><a href="http://samples.iffort.ai:66/" target="_blank">Demo</a></td>
+          </tr>
+          <tr>
+            <td>FitZe VoiceGlow (Demo)</td>
+            <td>FitZe FAQ all-in-one AI (Voice, WhatsApp, Chatbot)</td>
+            <td><a href="https://tejas-sawant-iffort.github.io/Fitze-AI/fitze.html" target="_blank">Demo</a></td>
+          </tr>
+          <tr>
+            <td>Agency</td>
+            <td>Dashboard for digital agency solutions</td>
+            <td><a href="https://agents.iffort.ai" target="_blank">Demo</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  <div class="buttons">
-    <button class="back-button" onclick="history.back()">Back</button>
-    <button class="view-service" onclick="alert('View More Details on Service')">View More Details</button>
+    <div class="buttons">
+      <button class="back-button" onclick="history.back()">Back</button>
+      <button class="view-service" onclick="window.href="www.iffort.ai">Connect Iffort.ai </button>
+    </div>
   </div>
 
 </body>
