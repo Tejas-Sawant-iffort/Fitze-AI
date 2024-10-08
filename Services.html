@@ -1,213 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services and Solutions - Second Page</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    /* General Page Styling */
-    body {
-      font-family: 'Arial', sans-serif;
-      background: url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      padding: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services and Solutions - Second Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px; /* Updated for padding */
+        }
 
-    /* Container Styling with Glassmorphism */
-    .glass-container {
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 1200px;
-      width: 100%;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      margin-top:20px;
-    }
+        /* Container Styling with Glassmorphism */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto; /* Centering the container */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: 20px;
+        }
 
-    h1, h2 {
-      color: white;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        h1,
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    /* Card Styling */
-    .card {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      border: 2px solid pink;
-      box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
-      margin: 15px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s;
-      position: relative;
-      overflow: hidden;
-      height: 300px; /* Fixed height for cards */
-      width: 250px; /* Fixed width for cards */
-      cursor: pointer; /* Indicate clickable card */
-    }
+        /* Card Styling */
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            border: 2px solid pink;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            height: 300px; /* Fixed height for cards */
+            cursor: pointer; /* Indicate clickable card */
+        }
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+        .card:hover {
+            transform: scale(1.05);
+        }
 
-    .card img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.6; /* Background image opacity */
-      object-fit: cover;
-      z-index: 1;
-    }
-    .card img:hover{
-      opacity: 0.8;
-      
-    }
-    .card-content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%; /* Ensure content fills the card */
-    }
+        .card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6; /* Background image opacity */
+            object-fit: cover;
+            z-index: 1;
+        }
 
-    .demo-text {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 18px;
-      color: white;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.3s;
-      display: flex;
-      align-items: center;
-    }
+        .card-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%; /* Ensure content fills the card */
+        }
 
-    .demo-text::after {
-      content: '→'; /* Arrow */
-      margin-left: 5px;
-    }
+        .demo-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            color: white;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+        }
 
-    .card:hover .demo-text {
-      opacity: 1; /* Show on hover */
-    }
+        .demo-text::after {
+            content: '→'; /* Arrow */
+            margin-left: 5px;
+        }
 
-    /* Responsive Grid */
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+        .card:hover .demo-text {
+            opacity: 1; /* Show on hover */
+        }
 
-    /* Button Styling */
-    .view-service {
-      background-color: #007BFF;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+        /* Responsive Grid */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    .view-service:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        /* Button Styling */
+        .view-service {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .view-service:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%; /* Adjust card width for mobile */
+                height: auto; /* Allow card height to adjust */
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Glassmorphism Container -->
-  <div class="glass-container">
-     <img src="GGWhiteLogo24.png" alt="JEtX Logo" class="logo">
+    <!-- Glassmorphism Container -->
+    <div class="glass-container">
+        <img src="GGWhiteLogo24.png" alt="JetX Logo" class="logo">
 
-    <div class="usecase">
-  <h2>IFFORT</h2>
-  <p style="color: white; text-align: center;">
-    We harness the power of artificial intelligence to transform industries. Our cutting-edge solutions empower businesses to enhance efficiency, improve customer experiences, and drive innovation. Join us in revolutionizing the way organizations operate through intelligent automation and data-driven insights.
-  </p>
-</div>
+        <div class="usecase">
+            <h2>IFFORT</h2>
+            <p style="color: white; text-align: center;">
+                We harness the power of artificial intelligence to transform industries. Our cutting-edge solutions empower businesses to enhance efficiency, improve customer experiences, and drive innovation. Join us in revolutionizing the way organizations operate through intelligent automation and data-driven insights.
+            </p>
+        </div>
 
+        <h2>Solutions We Provide</h2>
+        <div class="services-grid">
+            <div class="card" onclick="window.open('https://plantseatery.webflow.io/', '_blank')">
+                <img src="high-angle-friends-reading-menu-restaurant.jpg" alt="Plants Eatery">
+                <div class="card-content">
+                    <h3>Multilingual Restaurant Solutions</h3>
+                    <p>AI-driven solutions for optimizing food service operations and enhancing customer experience.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('https://aiinterviewer.webflow.io/', '_blank')">
+                <img src="businesswoman-wheelchair-with-short-hair.jpg" alt="Harman Interviewer">
+                <div class="card-content">
+                    <h3>Intelligent Interview Assistant</h3>
+                    <p>A cutting-edge AI voice interviewer designed to streamline recruitment processes through intelligent assessments.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('http://samples.iffort.ai:62', '_blank')">
+                <img src="male-real-estate-agent-doing-business-showing-house-potential-buying-couple.jpg" alt="Sunway MirAI">
+                <div class="card-content">
+                    <h3>Real Estate Advisor</h3>
+                    <p>Leveraging AI technology to revolutionize real estate interactions and enhance property management efficiency.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('http://samples.iffort.ai:64', '_blank')">
+                <img src="3d-rendering-isometric-house.jpg" alt="USA MirAI">
+                <div class="card-content">
+                    <h3>Property Solutions</h3>
+                    <p>Real estate AI solutions tailored for the US market, driving insights and supporting client relationships.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('https://interviewerchatbot.onrender.com/', '_blank')">
+                <img src="cartoon-ai-robot-scene.jpg" alt="Harman Interviewer Chat">
+                <div class="card-content">
+                    <h3>Conversational Interviewer</h3>
+                    <p>AI-powered chat interviewer that enhances candidate interactions through intelligent dialogue management.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('http://samples.iffort.ai:66/', '_blank')">
+                <img src="face-recognition-personal-identification-collage.jpg" alt="HR Iffort">
+                <div class="card-content">
+                    <h3>HR Solutions</h3>
+                    <p>AI solutions designed to optimize HR processes and improve employee engagement through data-driven insights.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('https://tejas-sawant-iffort.github.io/Fitze-AI/Fitze.html', '_blank')">
+                <img src="networking-social-distancing-woman-wearing-mask-talking-phone.jpg" alt="FitZe VoiceGlow">
+                <div class="card-content">
+                    <h3>Customer Care Innovations</h3>
+                    <p>Customer care AI that personalizes application care and streamlines customer services with intelligent solutions.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+        </div>
 
-    <h2>Solutions We Provide</h2>
-    <div class="services-grid">
-      <div class="card" onclick="window.open('https://plantseatery.webflow.io/', '_blank')">
-        <img src="high-angle-friends-reading-menu-restaurant.jpg" alt="Plants Eatery">
-        <div class="card-content">
-          <h3> Multilingual Restaurant Solutions</h3>
-          <p>AI-driven solutions for optimizing food service operations and enhancing customer experience.</p>
+        <div class="buttons">
+            <button class="view-service" onclick="window.location.href='http://samples.iffort.ai:99/'">Connect Iffort</button>
         </div>
-        <div class="demo-text">Demo</div>
-      </div>
-      <div class="card" onclick="window.open('https://aiinterviewer.webflow.io/', '_blank')">
-        <img src="businesswoman-wheelchair-with-short-hair.jpg" alt="Harman Interviewer">
-        <div class="card-content">
-          <h3>Intelligent Interview Assistant</h3>
-          <p>A cutting-edge AI voice interviewer designed to streamline recruitment processes through intelligent assessments.</p>
-        </div>
-        <div class="demo-text">Demo</div>
-      </div>
-      <div class="card" onclick="window.open('http://samples.iffort.ai:62', '_blank')">
-        <img src="male-real-estate-agent-doing-business-showing-house-potential-buying-couple.jpg" alt="Sunway MirAI">
-        <div class="card-content">
-          <h3>Real Estate Advisor</h3>
-          <p>Leveraging AI technology to revolutionize real estate interactions and enhance property management efficiency.</p>
-        </div>
-        <div class="demo-text">Demo</div>
-      </div>
-      <div class="card" onclick="window.open('http://samples.iffort.ai:64', '_blank')">
-        <img src="3d-rendering-isometric-house.jpg" alt="USA MirAI">
-        <div class="card-content">
-          <h3> Property Solutions</h3>
-          <p>Real estate AI solutions tailored for the US market, driving insights and supporting client relationships.</p>
-        </div>
-        <div class="demo-text">Demo</div>
-      </div>
-      <div class="card" onclick="window.open('https://interviewerchatbot.onrender.com/', '_blank')">
-        <img src="cartoon-ai-robot-scene.jpg" alt="Harman Interviewer Chat">
-        <div class="card-content">
-          <h3>Conversational Interviewer</h3>
-          <p>AI-powered chat interviewer that enhances candidate interactions through intelligent dialogue management.</p>
-        </div>
-        <div class="demo-text">Demo</div>
-      </div>
-      <div class="card" onclick="window.open('http://samples.iffort.ai:66/', '_blank')">
-        <img src="face-recognition-personal-identification-collage.jpg" alt="HR Iffort">
-        <div class="card-content">
-          <h3> HR Solutions</h3>
-          <p>AI solutions designed to optimize HR processes and improve employee engagement through data-driven insights.</p>
-        </div>
-        <div class="demo-text">Demo</div>
-      </div>
-      <div class="card" onclick="window.open('https://tejas-sawant-iffort.github.io/Fitze-AI/Fitze.html', '_blank')">
-        <img src="networking-social-distancing-woman-wearing-mask-talking-phone.jpg" alt="FitZe VoiceGlow">
-        <div class="card-content">
-          <h3>Customercare Innovations</h3>
-          <p>Customercare AI that personalizes Application care and streamlines Customer services with intelligent solutions.</p>
-        </div>
-        <div class="demo-text">Demo</div>
-      </div>
     </div>
 
-    <div class="buttons">
-      <button class="view-service" onclick="window.location.href='http://samples.iffort.ai:99/'">Connect Iffort</button>
-    </div>
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
