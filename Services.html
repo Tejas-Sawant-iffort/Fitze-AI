@@ -48,7 +48,8 @@
             transition: transform 0.3s;
             position: relative;
             overflow: hidden;
-            height: 300px; /* Fixed height for cards */
+            height: 400px; /* Fixed height for cards */
+            width: 300px; /* Fixed width for cards */
             cursor: pointer; /* Indicate clickable card */
         }
 
@@ -75,6 +76,17 @@
             flex-direction: column;
             justify-content: center;
             height: 100%; /* Ensure content fills the card */
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem; /* Increased font size for better readability */
+            font-weight: bold; /* Bold font for emphasis */
+            margin-bottom: 10px; /* Space below the title */
+        }
+
+        .card-content p {
+            font-size: 1rem; /* Font size for description */
+            margin: 0; /* Remove default margin */
         }
 
         .demo-text {
@@ -210,8 +222,6 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
