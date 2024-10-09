@@ -276,5 +276,49 @@ const buttonConfig = {
             document.body.appendChild(VG_SCRIPT);
         })()
 </script>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappPopup = document.querySelector('.whatsapp-popup');
+  const plantseatryVapiBtn = document.getElementById("plantseatry-vapi-btn");
+
+  // Function to hide the WhatsApp popup
+  const hideWhatsAppPopup = () => {
+    if (window.innerWidth <= 768) { // Only in mobile view
+      whatsappPopup.style.display = 'none';
+    }
+  };
+
+  // Function to show the WhatsApp popup
+  const showWhatsAppPopup = () => {
+    if (window.innerWidth <= 768) { // Only in mobile view
+      whatsappPopup.style.display = 'block';
+    }
+  };
+
+  // Handle Voiceglow button click (open popup)
+  plantseatryVapiBtn.addEventListener("click", () => { 
+    const vapiSupportBtn = document.getElementById("vapi-support-btn");
+    vapiSupportBtn.click(); 
+
+    if (plantseatryVapiBtn.classList.contains("vapi-btn-is-idle")) {
+      plantseatryVapiBtn.classList.remove("vapi-btn-is-idle");
+      plantseatryVapiBtn.classList.add("vapi-btn-is-loading");
+      hideWhatsAppPopup();  // Hide WhatsApp popup when Voiceglow opens
+    } else {
+      plantseatryVapiBtn.classList.remove("vapi-btn-is-loading");
+      plantseatryVapiBtn.classList.add("vapi-btn-is-idle");
+      showWhatsAppPopup();  // Show WhatsApp popup when Voiceglow closes
+    }
+  });
+
+  // Optionally, listen for screen resize to adjust visibility
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      whatsappPopup.style.display = 'block';  // Always show on larger screens
+    }
+  });
+});
+</script>
+
 </body>
 </html>
