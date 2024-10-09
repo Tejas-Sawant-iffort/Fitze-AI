@@ -197,6 +197,14 @@
             margin:10%;
         
         }
+        .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust the spacing between the logos */
+}
+
+    
     </style>
 </head>
 
@@ -204,10 +212,11 @@
 
     <!-- Glassmorphism Container -->
     <div class="glass-container">
-        <div class="logo">
-        <img src="GGWhiteLogo24.png" alt="Logo" class="logo">
-        <img src="iffort.ai-logo.svg" alt="Logo" class="logo" >
-        </div>
+       <div class="logo" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+    <img src="GGWhiteLogo24.png" alt="Logo" class="logo-img">
+    <img src="iffort.ai-logo.svg" alt="Logo" class="logo-img">
+</div>
+
 
         <div class="usecase">
 <!--             <p style="color: white;text-align: center;font-size:20px;">powered by iffort </p> -->
@@ -268,6 +277,11 @@
                 <div class="demo-text">Demo</div>
             </div>
         </div>
+
+        <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333; text-align: center; font-weight: bold;">
+    Powered by Iffort
+</div>
+
 
         <div class="buttons" style="display: flex; justify-content: center; padding: 10px; gap: 10px;">
     <button class="view-service" onclick="window.location.href='http://samples.iffort.ai:99/'">Connect Iffort</button>
