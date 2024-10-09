@@ -95,6 +95,200 @@
             justify-content: center;
             height: 100%; /* Ensure content fills the card */
         }
+        .neon-button {
+    background-color: transparent; /* Make the background transparent */
+    color: #00FFFF; /* Neon text color */
+    border: 2px solid rgba(0, 255, 255, 0.8); /* Neon border color */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 0 1px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6); /* Neon glow effect */
+}
+
+/* Hover effect */
+.neon-button:hover {
+    background-color: rgba(0, 255, 255, 0.1); /* Light background on hover */
+    box-shadow: 0 0 2px rgba(0, 255, 255, 1), 0 0 15px rgba(0, 255, 255, 0.8); /* Enhanced glow effect */
+}
+       
+     .text {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 20px; /* Adjust size as needed */
+    text-transform: uppercase; /* Makes text uppercase */
+    text-align: center; /* Center-aligns the text */
+    color: #fff; /* Neon color for the text */
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6); /* Neon glow effect */
+    letter-spacing: 2px; /* Space between letters for a robotic feel */
+    transition: transform 0.3s; /* Smooth transform transition */
+}
+        /* Container Styling with Glassmorphism */
+        .glass-container {
+            background: rgba(255, 255, 255, 0);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto; /* Centering the container */
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            margin-top: 20px;
+        }
+    .robotic-title {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    font-size: 28px; /* Adjust size as needed */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 3px; /* Space between letters for a robotic feel */
+   
+    -webkit-background-clip: text;
+    /* Makes text color transparent to show gradient */
+    animation: pulse 2s; /* Optional pulse animation */
+}
+
+        h1,
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Card Styling */
+        .card {
+           background: rgba(255, 255, 255, 0);
+            color:white;
+            border-radius: 10px;
+            border: 2px solid pink;
+            box-shadow: 0 0 10px rgba(237, 92, 242, 0.5);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            height: 400px; /* Fixed height for cards */
+            width: 300px; /* Fixed width for cards */
+            cursor: pointer; /* Indicate clickable card */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            Color:#FFA500;
+        }
+
+        .card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2; /* Background image opacity */
+            object-fit: cover;
+            z-index: 1;
+        }
+        .card h3 {
+  font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+  font-weight: 600; /* Slightly bold heading */
+  font-size: 1.5em; /* Larger font size */
+   
+  margin-bottom: 10px; /* Space below heading */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Paragraph inside the card */
+.card p {
+  font-family: 'Inconsolata', monospace; /* Clean monospace font for details */
+  font-size: 1em; /* Regular size */
+  
+  line-height: 1.6; /* Improved readability */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow depth */
+}
+
+/* Change h3 color on hover */
+.card:hover h3 {
+  color:white; /* Change to a blue color on hover */
+}
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%; /* Ensure content fills the card */
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem; /* Increased font size for better readability */
+            font-weight: bold; /* Bold font for emphasis */
+            margin-bottom: 10px; /* Space below the title */
+        }
+
+        .card-content p {
+            font-size: 1rem; /* Font size for description */
+            margin: 0; /* Remove default margin */
+        }
+
+        .demo-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            color: white;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+        }
+
+        .demo-text::after {
+            content: '→'; /* Arrow */
+            margin-left: 5px;
+        }
+
+        .card:hover .demo-text {
+            opacity: 1; /* Show on hover */
+        }
+
+        /* Responsive Grid */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Button Styling */
+        .view-service {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .view-service:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%; /* Adjust card width for mobile */
+                height: auto; /* Allow card height to adjust */
+            }
 
         /* Responsive Grid */
         .services-grid {
