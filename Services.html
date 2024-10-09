@@ -87,6 +87,35 @@
             object-fit: cover;
             z-index: 1;
         }
+        .card h3 {
+  font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+  font-weight: 600; /* Slightly bold heading */
+  font-size: 1.5em; /* Larger font size */
+  color: #333; /* Initial dark color */
+  margin-bottom: 10px; /* Space below heading */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Paragraph inside the card */
+.card p {
+  font-family: 'Inconsolata', monospace; /* Clean monospace font for details */
+  font-size: 1em; /* Regular size */
+  color: #666; /* Soft gray for readability */
+  line-height: 1.6; /* Improved readability */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow depth */
+}
+
+/* Change h3 color on hover */
+.card:hover h3 {
+  color: #007BFF; /* Change to a blue color on hover */
+}
 
         .card-content {
             position: relative;
