@@ -258,7 +258,18 @@
             }
             }
 
+    @media (max-width: 768px) {
+        .logo {
+            flex-direction: column; /* Stack the images vertically */
+        }
 
+        .logo img {
+            max-width: 150px; /* Resize the logos for mobile */
+            margin-bottom: 10px; /* Reduce bottom margin on smaller screens */
+            margin-left: 0; /* Reset left margin */
+            margin-right: 0; /* Reset right margin */
+        }
+    }
             
     </style>
 </head>
@@ -268,7 +279,7 @@
     <!-- Glassmorphism Container -->
     <div class="glass-container">
         <!-- Logo Section -->
-<div class="logo" style="display: flex; justify-content: center; align-items: center; gap: 50px;">
+<div class="logo" style="display: flex; justify-content: center; align-items: center;">
     <img src="GGWhiteLogo24.png" alt="GG White Logo" style="max-width: 200px;margin:auto;margin-bottom:20px;margin-left:10%">
     <img src="iffort.ai-logo.svg" alt="Iffort Logo" style="max-width: 250px;margin:auto;margin-bottom:20px;margin-right:10%">
 </div>
@@ -342,7 +353,7 @@
     <h3 style="font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #fff; margin-bottom: 10px;" class="robotic-title">
         Let’s have a chat
     </h3>
-    <p   style="font-family: 'Inconsolata', monospace;padding:60px" class="ts">
+    <p   style="font-family: 'Inconsolata', monospace;" class="ts">
         Schedule a call with us to discuss how we can help you leverage AI for your business and stay ahead of the competition
     </p>
     
