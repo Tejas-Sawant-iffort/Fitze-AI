@@ -258,6 +258,9 @@
             }
             }
 
+            .right{margin-right:10%;}
+            .left{margin-left:10%;}
+
     @media (max-width: 768px) {
         .logo {
             flex-direction: column; /* Stack the images vertically */
@@ -266,10 +269,10 @@
         .logo img {
             max-width: 150px; /* Resize the logos for mobile */
             margin-bottom: 10px; /* Reduce bottom margin on smaller screens */
-            margin-left: 0; /* Reset left margin */
-            margin-right: 0; /* Reset right margin */
+           
         }
     }
+           
             
     </style>
 </head>
@@ -280,8 +283,8 @@
     <div class="glass-container">
         <!-- Logo Section -->
 <div class="logo" style="display: flex; justify-content: center; align-items: center;">
-    <img src="GGWhiteLogo24.png" alt="GG White Logo" style="max-width: 200px;margin:auto;margin-bottom:20px;margin-left:10%">
-    <img src="iffort.ai-logo.svg" alt="Iffort Logo" style="max-width: 250px;margin:auto;margin-bottom:20px;margin-right:10%">
+    <img src="GGWhiteLogo24.png" alt="GG White Logo" class="left" style="max-width: 200px;margin:auto;margin-bottom:20px;" >
+    <img src="iffort.ai-logo.svg" alt="Iffort Logo"  class="right" style="max-width: 250px;margin:auto;margin-bottom:20px;">
 </div>
 
 
@@ -350,7 +353,7 @@
         
 
 <div class="chat-section" style="text-align: center; padding: 20px; color: #fff;font-family: 'Montserrat', sans-serif;">
-    <h3 style="font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #fff; margin-bottom: 10px;" class="robotic-title">
+    <h3 style="font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #fff; margin-bottom: -10px;" class="robotic-title">
         Let’s have a chat
     </h3>
     <p   style="font-family: 'Inconsolata', monospace;" class="ts">
