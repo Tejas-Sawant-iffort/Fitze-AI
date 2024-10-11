@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services and Solutions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1652717249447-293e8205c000?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+            background:black ;
+            
+            background-size: cover;
+            margin: 0;
+            padding: 20px; /* Updated for padding */
+        }
+
+        .text {
+             
+            font-size: 20px; /* Adjust size as needed */
+            text-transform: uppercase; /* Makes text uppercase */
+            text-align: center; /* Center-aligns the text */
+            color: #fff; /* Neon color for the text */
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6); /* Neon glow effect */
+            letter-spacing: 2px; /* Space between letters for a robotic feel */
+            transition: transform 0.3s; /* Smooth transform transition */
+        }
+
+        /* Container Styling with Glassmorphism */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto; /* Centering the container */
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            margin-top: 20px;
+        }
+
+        .robotic-title {
+            
+            font-size: 20px; /* Adjust size as needed */
+             
+            letter-spacing: 3px; /* Space between letters for a robotic feel */
+            -webkit-background-clip: text;
+            /* Makes text color transparent to show gradient */
+            animation: pulse 2s; /* Optional pulse animation */
+        }
+        .ts{
+               text-align: center;
+               margin: 10px 0;
+               font-size: 16px;
+               font-family: 'Inconsolata';
+               padding:90px;
+               color:white;
+               margin-top: -60px;
+               margin-bottom: -60px;
+           }
+
+        h1,
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Card Styling */
+        .card {
+            background: rgba(255, 255, 255, 0);
+            color: white;
+            border-radius: 10px;
+            border: 2px solid #8ff8ff;
+            box-shadow: 0 0 10px rgba(37, 92, 242, 0.5);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            height: 400px; /* Fixed height for cards */
+            width: 300px; /* Fixed width for cards */
+            cursor: pointer; /* Indicate clickable card */
+        }
+
+        .card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2; /* Background image opacity */
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%; /* Ensure content fills the card */
+        }
+
+       
+     
+/*         .card:hover  img{
+            
+            
+            opacity: 0.6; /* Background image opacity */
+           
+            
+        } */
+
+        .card-content h3 {
+             
+             
+            font-size: 1.5rem; /* Increased font size for better readability */
+            font-weight: bold; /* Bold font for emphasis */
+            margin-bottom: 100px; /* Space below the title */
+        }
+
+        .card-content p {
+            font-size: 1rem; /* Font size for description */
+             
+            margin: auto; /* Remove default margin */
+        }
+
+        .demo-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            color: white;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+             
+        }
+
+        .demo-text::after {
+            content: '→'; /* Arrow */
+            margin-left: 5px;
+        }
+
+        .card:hover .demo-text {
+            opacity: 1; /* Show on hover */
+        }
+
+        /* Responsive Grid */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Button Styling */
+        .view-service {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .view-service:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%; /* Adjust card width for mobile */
+                height: auto; /* Allow card height to adjust */
+            }
+
+        /* Responsive Grid */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Logo Container */
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 150px; /* Ensure logos are not too large */
+            height: auto;
+            object-fit: contain; /* Keep aspect ratio */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%; /* Adjust card width for mobile */
+                height: auto; /* Allow card height to adjust */
+            }
+        }
+            .chat-section {
+    text-align: center; /* Center text */
+}
+
+.chat-section h3 {
+    margin-left:10%;
+    
+    font-weight: bold; /* Bold text */
+
+}
+
+.chat-section p {
+    margin-left:10%;
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 10px; /* Regular font size */
+}
+
+.logo-links {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center logos */
+    gap: 20px; /* Space between logos */
+    margin-top: 20px; /* Space above logos */
+}
+
+.logo-links img {
+    max-width: 80px; /* Set max width for logos */
+    transition: transform 0.2s; /* Transition for hover effect */
+}
+
+.logo-links img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+            .usecase{
+                display: flex;
+            flex-wrap: wrap;
+            justify-content: center;   
+            }
+            
+          
+            
+            
+            @media(max-width: 768px){
+                .ts{
+                padding:10px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            }
+
+            
+            
+           
+
+    @media (max-width: 768px) {
+        .logo {
+            flex-direction: column; /* Stack the images vertically */
+        }
+
+        .logo-img {
+            max-width: 150px; /* Resize the logos for mobile */
+            margin-bottom: 10px; /* Reduce bottom margin on smaller screens */
+            margin-left:0px;
+            margin-right:0px;
+           
+        }
+    }
+           
+            
+    </style>
+</head>
+
+<body>
+
+    <!-- Glassmorphism Container -->
+    <div class="glass-container">
+        <!-- Logo Section -->
+       
+        
+<div class="logo" style="display: flex; justify-content: center; align-items: center;">
+    <img src="GGWhiteLogo24.png" alt="GG White Logo"  style="max-width: 200px;margin:auto;margin-bottom:20px;margin-left:9%;" class="logo-img" >
+    <img src="iffort.ai-logo.svg" alt="Iffort Logo"   style="max-width: 250px;margin:auto;margin-bottom:20px;margin-right:9%;" class="logo-img" >
+</div>
+        
+
+
+        <div class="usecase">
+            <h2 style="  font-weight: bold; color: #fff; margin-bottom: 20px;margin-top:40px" class="robotic-title">Solutions We Provide</h2>
+            <p   style=" color:white" class="ts">
+                Our cutting-edge solutions empower businesses to enhance efficiency, improve customer experiences, and drive innovation. Join us in revolutionizing the way organizations operate through intelligent automation and data-driven insights.
+            </p>
+        </div>
+
+       
+              
+        <div class="services-grid">
+            <div class="card" onclick="window.open('https://gitex-plantseatery.webflow.io/', '_blank')">
+                <img src="https://d57439wlqx3vo.cloudfront.net/iblock/6cc/6ccab5f1d555f5739c9a3c7ab53c21a7/0895b691239e211a619a481eadfed209.png?1728243915317" alt="Plants Eatery">
+                <div class="card-content">
+                    <h3 class="robotic-title" style="font-size:20px;" >Multilingual Restaurant Solutions</h3>
+                    <p>AI-driven solutions for optimizing food service operations and enhancing customer experience.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('https://gitex-ai-interviewer.webflow.io/', '_blank')">
+                <img src="https://img-cdn.pixlr.com/image-generator/history/65ba5701b4f4f4419f746bc3/806ecb58-167c-4d20-b658-a6a6b2f221e9/medium.webp" alt="Harman Interviewer">
+                <div class="card-content">
+                    <h3 class="robotic-title" style="font-size:20px;" >Intelligent Interview Assistant</h3>
+                    <p>A cutting-edge AI voice interviewer designed to streamline recruitment processes through intelligent assessments.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('http://164.52.211.3:66/', '_blank')">
+                <img src="https://i0.wp.com/www.sutisoft.com/blog/wp-content/uploads/2015/04/HR-Management-Systems-scaled.jpeg?fit=2560%2C1440&ssl=1" alt="HR Iffort">
+                <div class="card-content">
+                    <h3 class="robotic-title" style="font-size:20px;" >HR Solutions</h3>
+                    <p>AI solutions designed to optimize HR processes and improve employee engagement through data-driven insights.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('http://164.52.211.3:64/', '_blank')">
+                <img src="https://silveroak.ae/wp-content/uploads/2023/01/Realestate-Tips.png" alt="USA MirAI">
+                <div class="card-content">
+                    <h3 class="robotic-title" style="font-size:20px;" >Property Solutions</h3>
+                    <p>Real estate AI solutions tailored for the US market, driving insights and supporting client relationships.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+            <div class="card" onclick="window.open('https://ai-customer-service.webflow.io/', '_blank')">
+                <img src="https://codedesign.org/storage/app/media/uploaded-files/customer%20service.jpeg" alt="FitZe VoiceGlow">
+                <div class="card-content">
+                    <h3 class="robotic-title" style="font-size:20px;" > Customer Care Innovations</h3>
+                    <p>Customer care AI that personalizes application care and streamlines customer services with intelligent solutions.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+              <div class="card" onclick="window.open('https://test.aitoflo.workers.dev/', '_blank')">
+                <img src="https://builtin.com/sites/www.builtin.com/files/styles/og/public/2022-09/ecommerce.png" alt="E-com">
+                <div class="card-content">
+                    <h3 class="robotic-title" style="font-size:20px;" >E-commerce Solutions</h3>
+                    <p>AI solutions for the real E-commerce market, delivering insights and enhancing client relationships.</p>
+                </div>
+                <div class="demo-text">Demo</div>
+            </div>
+        </div>
+            <!-- Cards content here -->
+       
+
+        
+
+<div class="chat-section" style="text-align: center; padding: 20px; color: #fff; ">
+    <h3 style=" ; color: #fff; margin-bottom: -10px; margin-top:40px;" class="robotic-title">
+        Let’s have a chat
+    </h3>
+    <p   style=" " class="ts">
+        Schedule a call with us to discuss how we can help you leverage AI for your business and stay ahead of the competition
+    </p>
+    
+ <div class="logo-links" style="display: flex; justify-content: center; gap: 20%; margin-top: 20px;">
+    <div style="text-align: center;">
+        <a href="https://www.iffort.ai/" target="_blank">
+            <img src="iffort (1).png" alt="Logo 1" style="width: 40px; height: 40px; transition: transform 0.2s; border-radius:5px;margin-bottom:7px;">
+        </a>
+        <p style=" " >Reach with us</p>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="https://wa.me/98917009770" target="_blank">
+            <img src="—Pngtree—whatsapp icon_8704827.png" alt="Logo 2" style="width: 40px; height: 40px; transition: transform 0.2s;margin-bottom:7px;">
+        </a>
+        <p style=" ">Chat with us</p>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="tel:+971 54 545 7770" target="_blank">
+            <img src="unnamed (1).png" alt="Logo 3" style="width: 50px; height: 50px; transition: transform 0.2s; margin-bottom:5px;">
+        </a>
+        <p style=" " >Call with us</p>
+    </div>
+</div>
+
+
+
+
+        <div style="font-family: Arial, sans-serif; font-size: 16px; color: #fff; text-align: center; font-weight: bold;font-style: italic; margin-left:80%;">
+            <p>Powered by Iffort</p>
+     </div>
+
+    </div>
+
+</body>
+
+</html>
